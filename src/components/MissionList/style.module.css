@@ -1,0 +1,13 @@
+.card{
+    background-color: rgb(34, 33, 33);
+    color: rgb(216, 202, 202);
+    margin: 5px auto;
+    text-align: start;
+    max-width: 80%;
+    border-radius: 8px;
+    padding: 10px;
+}
+.main{
+    margin: 0 auto;
+
+}

@@ -1,14 +1,11 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import MissionList from './components/MissionList';
-import MissionDetail from './components/MissionDetail';
+import LaunchListContainer from './components/MissionList';
 
 function App() {
   return (
-    <div>
-      <MissionList />
-      <MissionDetail />
+    <div className='main'>
+      <LaunchListContainer />
     </div>
   );
 }
