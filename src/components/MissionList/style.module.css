@@ -1,3 +1,7 @@
+.top{
+    width: 80%;
+    margin: 0 auto;
+}
 .card{
     background-color: rgb(34, 33, 33);
     color: rgb(216, 202, 202);
@@ -5,9 +9,25 @@
     text-align: start;
     max-width: 80%;
     border-radius: 8px;
-    padding: 10px;
+    padding: 10px 20px;
 }
 .main{
     margin: 0 auto;
+}
+.btn{
+    background-color: rgb(102, 202, 202);
+    border: double;
+    padding: 5px 20px;
+    border-radius: 5px;
+    font-weight: bolder;
+    box-shadow: 2px 5px 3px -3px;
+}
+.btn:hover{
+    background-color: rgb(87, 146, 146);
+    border: double;
+    padding: 5px 20px;
+    border-radius: 5px;
+    font-weight: bolder;
+    box-shadow: 2px 5px 3px -3px;
 
 }

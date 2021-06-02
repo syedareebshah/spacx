@@ -1,0 +1,9 @@
+.main{
+    padding: 20px 10px;
+    text-align: center;
+}
+.img{
+    max-width: 70%;
+    height: auto;
+    margin: 0 auto;
+}

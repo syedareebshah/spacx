@@ -764,7 +764,7 @@ export type LaunchListQuery = (
   { __typename?: 'Query' }
   & { launches?: Maybe<Array<Maybe<(
     { __typename?: 'Launch' }
-    & Pick<Launch, 'mission_name' | 'launch_year' | 'launch_success' | 'mission_id'>
+    & Pick<Launch, 'mission_name' | 'launch_year' | 'launch_success' | 'mission_id' | 'launch_date_local'>
   )>>> }
 );
 
@@ -823,6 +823,7 @@ export const LaunchListDocument = gql`
     launch_year
     launch_success
     mission_id
+    launch_date_local
   }
 }
     `;

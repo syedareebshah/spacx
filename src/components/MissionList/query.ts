@@ -7,6 +7,7 @@ export const QUERY_LAUNCH_LIST = gql`
         launch_year
         launch_success
         mission_id
+        launch_date_local
     }
   }
 `;
