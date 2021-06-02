@@ -764,7 +764,7 @@ export type LaunchListQuery = (
   { __typename?: 'Query' }
   & { launches?: Maybe<Array<Maybe<(
     { __typename?: 'Launch' }
-    & Pick<Launch, 'mission_name' | 'launch_year' | 'launch_success' | 'mission_id' | 'launch_date_local'>
+    & Pick<Launch, 'launch_year' | 'launch_success' | 'mission_name' | 'mission_id' | 'launch_date_local'>
   )>>> }
 );
 
@@ -819,9 +819,9 @@ export type LaunchProfileQueryResult = Apollo.QueryResult<LaunchProfileQuery, La
 export const LaunchListDocument = gql`
     query LaunchList {
   launches {
-    mission_name
     launch_year
     launch_success
+    mission_name
     mission_id
     launch_date_local
   }

@@ -30,7 +30,7 @@ const MissionsList:React.FC<Props> =({data})=>{
                     <div className={style.card} key={ind}>
                         <h2> {num}. Mission: <span className={obj?.launch_success ? 'passHeadin' : 'failHeadin'}>{obj?.mission_name}</span></h2>
                         <p>Date: {obj?.launch_date_local}</p>
-                        <Link to='/detail'>
+                        <Link to={`/detail/${num}`}>
                         <button className={style.btn}>Details</button>
                         </Link>
                     </div>

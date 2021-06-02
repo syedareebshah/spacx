@@ -12,6 +12,8 @@ const MissionList =()=>{
             <h3>Not Found ):</h3>
         )
     }
+    console.log(data);
+    
     
     return(
         <div>

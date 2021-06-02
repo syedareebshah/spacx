@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import {LaunchProfileQuery} from '../../generated/graphql';
 import style from '../MissionList/style.module.css'
-import './styles.css'
+import '../MissionList/second.css'
 import { Link } from "react-router-dom";
 
 interface Props {
@@ -10,21 +10,25 @@ interface Props {
 
 const MissionDetailPage:React.FC<Props> =({data})=>{
     console.log(data,".......");
+
+    let x = data.launch?.links?.flickr_images
+    console.log(x,'yeh');
     
+
     
     return(
         <div>    
             <div className={style.card}>
-            <h2>Mission: {data.launch?.mission_name}</h2>
+            <h2>Mission: <span className={data.launch?.launch_success ? 'passHeadin' : 'failHeadin'}>{data.launch?.mission_name}</span> </h2>
             <hr/>
-            <h3>Mission Success: {data.launch?.launch_success ? 'Yes' : 'No'}</h3>
+            <h3>Mission Success: <span className={data.launch?.launch_success ? 'passHeadin' : 'failHeadin'}> {data.launch?.launch_success ? 'Yes' : 'No'}</span> </h3>
             <hr />
             <h3>Date : {data.launch?.launch_date_local}</h3>
             <hr/>
             <h3>Year : {data.launch?.launch_year} </h3>
             <hr/>
             <h3>Details :</h3>
-            <p>{data.launch?.details}:</p> 
+            <p>{data.launch?.details}</p> 
             </div>
 
             <div className={style.card}>
@@ -32,8 +36,24 @@ const MissionDetailPage:React.FC<Props> =({data})=>{
             <hr />
             <h3>Rocket Name: {data.launch?.rocket?.rocket_name}</h3>
             <h3>Rocket Type: {data.launch?.rocket?.rocket_type}</h3>
+
+            </div>
+            <div className={style.card}>
             <h2>Images</h2>
             </div>
+
+            <div className={style.card}>
+            {
+                x?.map((obj,ind)=>{
+                    return(
+                        <div key={ind}>
+                            <img className={style.pics} src={`${obj}`} />
+                        </div>
+                    )
+                })
+            }
+            </div>
+
             <Link to='/'>
             <button style={{marginTop:'20px'}} className={style.btn}>Back</button>
             </Link>

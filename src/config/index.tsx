@@ -14,7 +14,7 @@ const AppRouter = () => {
         <Header />
         <Routes>
           <Route element={<MissionList />} path="/" />
-          <Route element={<MissionDetail />} path="/detail" />
+          <Route element={<MissionDetail />} path="/detail/:got_id" />
 
 
           {/* <Route element={<Home />} path="/" />
