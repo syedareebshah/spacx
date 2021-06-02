@@ -4,18 +4,17 @@ import './second.css'
 
 
 
-const MissionList =()=>{
-    const {loading, error, data} = useLaunchListQuery()
-    if(loading) return <div className='load' >loading...</div>
-    if(error || !data) {
-        return(
+const MissionList = () => {
+    const { loading, error, data } = useLaunchListQuery()
+    if (loading) return <div className='load' >loading...</div>
+    if (error || !data) {
+        return (
             <h3>Not Found ):</h3>
         )
     }
-    console.log(data);
-    
-    
-    return(
+
+
+    return (
         <div>
             <MissionsList data={data} />
         </div>

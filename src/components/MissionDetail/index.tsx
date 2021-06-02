@@ -4,21 +4,20 @@ import { useParams } from 'react-router-dom'
 
 const MissionDetail = () => {
     const { got_id } = useParams()
-    
+
     const { data, error, loading } = useLaunchProfileQuery({ variables: { id: got_id } });
     if (loading) {
-        return <div>Loading...</div>;
+        return <h3>Loading...</h3>;
     }
 
     if (error || !data) {
-        return <div>ERROR</div>;
+        return <h3>ERROR</h3>;
     }
 
-    console.log(data,"//")
 
     return (
         <div>
-            <MissionDetailPage data={data} />            
+            <MissionDetailPage data={data} />
         </div>
     )
 }
