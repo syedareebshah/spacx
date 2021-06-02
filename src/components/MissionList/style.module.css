@@ -11,6 +11,17 @@
     border-radius: 8px;
     padding: 10px 20px;
 }
+.card:hover{
+    background-color: rgb(43, 41, 41);
+    color: rgb(216, 202, 202);
+    margin: 5px auto;
+    text-align: start;
+    max-width: 80%;
+    border-radius: 8px;
+    padding: 10px 20px;
+    transform: scale(1.01);
+    transition: transform .5s ease;
+}
 .main{
     margin: 0 auto;
 }

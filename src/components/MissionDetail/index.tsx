@@ -1,4 +1,5 @@
 import { useLaunchProfileQuery } from '../../generated/graphql';
+import MissionDetailPage from './MissionDetailPage';
 
 const MissionDetail = () => {
 
@@ -7,7 +8,7 @@ const MissionDetail = () => {
         return <div>Loading...</div>;
     }
 
-    if (error) {
+    if (error || !data) {
         return <div>ERROR</div>;
     }
 
@@ -15,7 +16,7 @@ const MissionDetail = () => {
 
     return (
         <div>
-            MisionDetail
+            <MissionDetailPage data={data} />            
         </div>
     )
 }
